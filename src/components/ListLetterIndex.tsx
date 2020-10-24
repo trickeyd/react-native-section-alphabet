@@ -17,7 +17,6 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
     if (indexLetterColor) {
       return {
         color: indexLetterColor,
-        fontSize: indexLetterSize
       };
     }
 
