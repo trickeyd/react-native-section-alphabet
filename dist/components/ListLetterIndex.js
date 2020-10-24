@@ -42,15 +42,11 @@ var ListLetterIndex = /** @class */ (function (_super) {
         return _this;
     }
     ListLetterIndex.prototype.getComputedLabelStyle = function () {
-        var _a = this.props, indexLetterColor = _a.indexLetterColor, indexLetterSize = _a.indexLetterSize;
-        if (indexLetterSize) {
+        var props = this.props;
+        if (props) {
             return {
-                fontSize: indexLetterSize
-            };
-        }
-        if (indexLetterColor) {
-            return {
-                color: indexLetterColor,
+                color: props.indexLetterColor,
+                fontSize: props.indexLetterSize
             };
         }
     };

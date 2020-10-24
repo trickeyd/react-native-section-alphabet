@@ -8,11 +8,8 @@ interface Props {
 }
 export default class ListLetterIndex extends React.PureComponent<Props> {
     getComputedLabelStyle(): {
-        fontSize: number;
-        color?: undefined;
-    } | {
-        color: string;
-        fontSize?: undefined;
+        color: string | undefined;
+        fontSize: number | undefined;
     } | undefined;
     renderLetterItem: ({ item, index }: {
         item: ISectionData;

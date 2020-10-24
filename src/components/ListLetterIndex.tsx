@@ -8,9 +8,12 @@ interface Props {
   sectionData: ISectionData[];
   indexLetterColor?: string;
   indexLetterSize?: number;
+  letterIndexWidth?: number;
+  letterIndexHeight?: number;
 }
 
 export default class ListLetterIndex extends React.PureComponent<Props> {
+
   getComputedLabelStyle() {
     const props = this.props;
 
@@ -20,7 +23,17 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
         fontSize: props.indexLetterSize
       };
     }
+  }
 
+  getWidthContainerStyle() {
+    const props = this.props;
+
+    if (props) {
+      return {
+        width: props.letterIndexWidth,
+        height: props.letterIndexHeight,
+      };
+    }
   }
 
   renderLetterItem = ({ item, index }: { item: ISectionData; index: number }) => {
@@ -36,8 +49,10 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
   };
 
   render() {
+    const computedWidthStyle = this.getWidthContainerStyle();
+
     return (
-      <View style={styles.letterIndexContainer}>
+      <View style={[styles.letterIndexContainer, computedWidthStyle]}>
         <FlatList
           contentContainerStyle={styles.letterIndexList}
           data={this.props.sectionData}
