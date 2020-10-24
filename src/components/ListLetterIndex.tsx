@@ -9,6 +9,7 @@ interface Props {
   indexLetterColor?: string;
   indexLetterSize?: number;
   letterIndexWidth?: number;
+  letterItemStyle?: any;
   containerStyle?: any;
   alphabetContainer?: any;
 }
@@ -37,12 +38,23 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
     }
   }
 
+  getLetterItemStyle() {
+    const { letterItemStyle } = this.props;
+
+    if (letterItemStyle) {
+      return {
+        ...letterItemStyle
+      };
+    }
+  }
+
   renderLetterItem = ({ item, index }: { item: ISectionData; index: number }) => {
     const computedLabelStyle = this.getComputedLabelStyle();
+    const computedItemStyle = this.getLetterItemStyle();
 
     return (
       <TouchableOpacity onPress={() => this.props.onPressLetter(index)}>
-        <View style={styles.letterIndexItem}>
+        <View style={[styles.letterIndexItem, computedItemStyle]}>
           <Text style={[styles.letterIndexLabel, computedLabelStyle]}>{item.title}</Text>
         </View>
       </TouchableOpacity>

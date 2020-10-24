@@ -117,6 +117,7 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
           letterIndexWidth={this.props.letterIndexWidth}
           containerStyle={this.props.containerStyle}
           alphabetContainer={this.props.alphabetContainer}
+          letterItemStyle={this.props.letterItemStyle}
         />
       </View>
     );

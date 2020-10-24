@@ -7,6 +7,7 @@ interface Props {
     indexLetterSize?: number;
     letterIndexWidth?: number;
     containerStyle?: any;
+    alphabetContainer?: any;
 }
 export default class ListLetterIndex extends React.PureComponent<Props> {
     getComputedLabelStyle(): {

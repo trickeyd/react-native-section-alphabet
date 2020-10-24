@@ -69,8 +69,9 @@ var ListLetterIndex = /** @class */ (function (_super) {
     };
     ListLetterIndex.prototype.render = function () {
         var computedWidthStyle = this.getWidthContainerStyle();
+        var alphabetContainer = this.props.alphabetContainer;
         return (<react_native_1.View style={[ListLetterIndexStyle_1.default.letterIndexContainer, computedWidthStyle]}>
-        <react_native_1.FlatList contentContainerStyle={ListLetterIndexStyle_1.default.letterIndexList} data={this.props.sectionData} renderItem={this.renderLetterItem} keyExtractor={function (i) { return i.title; }}/>
+        <react_native_1.FlatList contentContainerStyle={[ListLetterIndexStyle_1.default.letterIndexList, alphabetContainer]} data={this.props.sectionData} renderItem={this.renderLetterItem} keyExtractor={function (i) { return i.title; }}/>
       </react_native_1.View>);
     };
     return ListLetterIndex;

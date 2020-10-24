@@ -17,4 +17,5 @@ export default interface Props {
   letterIndexHeight?: number;
   containerStyle?: any;
   alphabetContainer?: any;
+  letterItemStyle?: any;
 }
