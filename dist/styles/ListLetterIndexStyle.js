@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var sizes = {
-    containerWidth: 16,
+    containerWidth: 10,
     itemHeight: 15,
     itemFontSize: 16,
 };

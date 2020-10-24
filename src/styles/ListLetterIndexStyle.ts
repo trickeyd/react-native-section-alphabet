@@ -1,5 +1,5 @@
 const sizes = {
-  containerWidth: 10,
+  containerWidth: 20,
   itemHeight: 15,
   itemFontSize: 16,
 };
