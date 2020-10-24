@@ -10,6 +10,7 @@ interface Props {
   indexLetterSize?: number;
   letterIndexWidth?: number;
   containerStyle?: any;
+  alphabetContainer?: any;
 }
 
 export default class ListLetterIndex extends React.PureComponent<Props> {
@@ -50,11 +51,12 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
 
   render() {
     const computedWidthStyle = this.getWidthContainerStyle();
+    const { alphabetContainer } = this.props;
 
     return (
       <View style={[styles.letterIndexContainer, computedWidthStyle]}>
         <FlatList
-          contentContainerStyle={styles.letterIndexList}
+          contentContainerStyle={[styles.letterIndexList, alphabetContainer]}
           data={this.props.sectionData}
           renderItem={this.renderLetterItem}
           keyExtractor={(i) => i.title}

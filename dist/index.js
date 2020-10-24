@@ -99,7 +99,7 @@ var AlphabetList = /** @class */ (function (_super) {
         return (<react_native_1.View style={[AlphabetListStyle_1.default.container, this.props.style]}>
         <react_native_1.SectionList {...this.props} ref={this.onSetSectionListRef} sections={this.state.sectionData} keyExtractor={function (item) { return item.key; }} renderItem={this.onRenderItem} renderSectionHeader={this.onRenderSectionHeader} getItemLayout={this.onGetItemLayout}/>
 
-        <ListLetterIndex_1.default sectionData={this.state.sectionData} onPressLetter={this.onScrollToSection} indexLetterColor={this.props.indexLetterColor} indexLetterSize={this.props.indexLetterSize}/>
+        <ListLetterIndex_1.default sectionData={this.state.sectionData} onPressLetter={this.onScrollToSection} indexLetterColor={this.props.indexLetterColor} indexLetterSize={this.props.indexLetterSize} letterIndexWidth={this.props.letterIndexWidth} containerStyle={this.props.containerStyle}/>
       </react_native_1.View>);
     };
     return AlphabetList;

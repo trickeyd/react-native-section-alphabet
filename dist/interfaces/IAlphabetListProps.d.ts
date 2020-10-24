@@ -13,4 +13,7 @@ export default interface Props {
     sectionHeaderHeight?: number;
     indexLetterColor?: string;
     indexLetterSize?: number;
+    letterIndexWidth?: number;
+    letterIndexHeight?: number;
+    containerStyle?: any;
 }

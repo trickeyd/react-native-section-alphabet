@@ -6,17 +6,14 @@ interface Props {
     indexLetterColor?: string;
     indexLetterSize?: number;
     letterIndexWidth?: number;
-    letterIndexHeight?: number;
+    containerStyle?: any;
 }
 export default class ListLetterIndex extends React.PureComponent<Props> {
     getComputedLabelStyle(): {
         color: string | undefined;
         fontSize: number | undefined;
     } | undefined;
-    getWidthContainerStyle(): {
-        width: number | undefined;
-        height: number | undefined;
-    } | undefined;
+    getWidthContainerStyle(): any;
     renderLetterItem: ({ item, index }: {
         item: ISectionData;
         index: number;
