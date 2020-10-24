@@ -18,6 +18,9 @@
     "preversion": "npm run lint",
     "postversion": "git push && git push --tags"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kieran-McIntyre/react-native-alphabet-list.git",
@@ -32,8 +35,7 @@
     "addressbook"
   ],
   "author": {
-    "name": "Kieran McIntyre",
-    "email": "k.mcintyre98@outlook.com"
+    "name": "Coffer Hub"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
