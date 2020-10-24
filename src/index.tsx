@@ -26,7 +26,7 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
 
     this.onGetItemLayout = sectionListGetItemLayout({
       getItemHeight: (_rowData: any, sectionIndex: number, rowIndex: number) =>
-        onGetItemHeight({ sectionIndex, rowIndex }),
+      onGetItemHeight({ sectionIndex, rowIndex }),
       getSectionHeaderHeight: () => sectionHeaderHeight,
       getSectionFooterHeight: () => 0,
     });
@@ -113,6 +113,7 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
           sectionData={this.state.sectionData}
           onPressLetter={this.onScrollToSection}
           indexLetterColor={this.props.indexLetterColor}
+          indexLetterSize={this.props.indexLetterSize}
         />
       </View>
     );

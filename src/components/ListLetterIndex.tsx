@@ -12,19 +12,15 @@ interface Props {
 
 export default class ListLetterIndex extends React.PureComponent<Props> {
   getComputedLabelStyle() {
-    const { indexLetterColor, indexLetterSize } = this.props;
+    const props = this.props;
 
-    if (indexLetterSize) {
+    if (props) {
       return {
-        fontSize: indexLetterSize
+        color: props.indexLetterColor,
+        fontSize: props.indexLetterSize
       };
     }
 
-    if (indexLetterColor) {
-      return {
-        color: indexLetterColor,
-      };
-    }
   }
 
   renderLetterItem = ({ item, index }: { item: ISectionData; index: number }) => {
