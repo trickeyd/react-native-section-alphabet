@@ -18,13 +18,10 @@
     "preversion": "npm run lint",
     "postversion": "git push && git push --tags"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kieran-McIntyre/react-native-alphabet-list.git",
-    "baseUrl": "https://github.com/Kieran-McIntyre/react-native-alphabet-list"
+    "url": "git+https://github.com/CofferHub/react-native-section-alphabet-list.git",
+    "baseUrl": "https://github.com/CofferHub/react-native-section-alphabet-list"
   },
   "keywords": [
     "react-native",
@@ -35,7 +32,7 @@
     "addressbook"
   ],
   "author": {
-    "name": "Coffer Hub"
+    "name": "CofferHub"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
