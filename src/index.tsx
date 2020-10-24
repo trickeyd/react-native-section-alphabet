@@ -114,6 +114,8 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
           onPressLetter={this.onScrollToSection}
           indexLetterColor={this.props.indexLetterColor}
           indexLetterSize={this.props.indexLetterSize}
+          letterIndexWidth={this.props.letterIndexWidth}
+          containerStyle={this.props.containerStyle}
         />
       </View>
     );

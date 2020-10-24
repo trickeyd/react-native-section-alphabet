@@ -50,8 +50,18 @@ var ListLetterIndex = /** @class */ (function (_super) {
             };
         }
     };
+    ListLetterIndex.prototype.getWidthContainerStyle = function () {
+        var props = this.props;
+        if (props) {
+            return {
+                width: props.letterIndexWidth,
+                height: props.letterIndexHeight,
+            };
+        }
+    };
     ListLetterIndex.prototype.render = function () {
-        return (<react_native_1.View style={ListLetterIndexStyle_1.default.letterIndexContainer}>
+        var computedWidthStyle = this.getWidthContainerStyle();
+        return (<react_native_1.View style={[ListLetterIndexStyle_1.default.letterIndexContainer, computedWidthStyle]}>
         <react_native_1.FlatList contentContainerStyle={ListLetterIndexStyle_1.default.letterIndexList} data={this.props.sectionData} renderItem={this.renderLetterItem} keyExtractor={function (i) { return i.title; }}/>
       </react_native_1.View>);
     };

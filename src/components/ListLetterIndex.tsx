@@ -9,7 +9,7 @@ interface Props {
   indexLetterColor?: string;
   indexLetterSize?: number;
   letterIndexWidth?: number;
-  letterIndexHeight?: number;
+  containerStyle?: any;
 }
 
 export default class ListLetterIndex extends React.PureComponent<Props> {
@@ -31,7 +31,7 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
     if (props) {
       return {
         width: props.letterIndexWidth,
-        height: props.letterIndexHeight,
+        ...props.containerStyle
       };
     }
   }
