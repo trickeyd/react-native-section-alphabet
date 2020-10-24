@@ -4,10 +4,12 @@ interface Props {
     onPressLetter: (sectionIndex: number) => void;
     sectionData: ISectionData[];
     indexLetterColor?: string;
+    indexLetterSize?: number;
 }
 export default class ListLetterIndex extends React.PureComponent<Props> {
     getComputedLabelStyle(): {
         color: string;
+        fontSize: number | undefined;
     } | undefined;
     renderLetterItem: ({ item, index }: {
         item: ISectionData;

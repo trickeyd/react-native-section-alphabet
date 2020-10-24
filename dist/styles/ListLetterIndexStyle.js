@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var sizes = {
-    containerWidth: 10,
+    containerWidth: 16,
     itemHeight: 15,
-    itemFontSize: 10,
+    itemFontSize: 16,
 };
 var styles = {
     letterIndexContainer: {
@@ -11,7 +11,8 @@ var styles = {
         height: "100%",
         position: "absolute",
         top: 0,
-        right: 0,
+        right: 5,
+        padding: 5,
     },
     letterIndexList: {
         alignItems: "center",
