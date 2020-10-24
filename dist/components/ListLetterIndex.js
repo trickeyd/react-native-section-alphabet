@@ -26,24 +26,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var react_native_1 = require("react-native");
 var ListLetterIndexStyle_1 = __importDefault(require("../styles/ListLetterIndexStyle"));
-var AlphabetLetterIndex = /** @class */ (function (_super) {
-    __extends(AlphabetLetterIndex, _super);
-    function AlphabetLetterIndex() {
+var ListLetterIndex = /** @class */ (function (_super) {
+    __extends(ListLetterIndex, _super);
+    function ListLetterIndex() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.renderLetterItem = function (_a) {
             var item = _a.item, index = _a.index;
             var computedLabelStyle = _this.getComputedLabelStyle();
             return (<react_native_1.TouchableOpacity onPress={function () { return _this.props.onPressLetter(index); }}>
         <react_native_1.View style={ListLetterIndexStyle_1.default.letterIndexItem}>
-          <react_native_1.Text style={[ListLetterIndexStyle_1.default.letterIndexLabel, computedLabelStyle]}>
-            {item.title}
-          </react_native_1.Text>
+          <react_native_1.Text style={[ListLetterIndexStyle_1.default.letterIndexLabel, computedLabelStyle]}>{item.title}</react_native_1.Text>
         </react_native_1.View>
       </react_native_1.TouchableOpacity>);
         };
         return _this;
     }
-    AlphabetLetterIndex.prototype.getComputedLabelStyle = function () {
+    ListLetterIndex.prototype.getComputedLabelStyle = function () {
         var indexLetterColor = this.props.indexLetterColor;
         if (indexLetterColor) {
             return {
@@ -51,11 +49,11 @@ var AlphabetLetterIndex = /** @class */ (function (_super) {
             };
         }
     };
-    AlphabetLetterIndex.prototype.render = function () {
+    ListLetterIndex.prototype.render = function () {
         return (<react_native_1.View style={ListLetterIndexStyle_1.default.letterIndexContainer}>
         <react_native_1.FlatList contentContainerStyle={ListLetterIndexStyle_1.default.letterIndexList} data={this.props.sectionData} renderItem={this.renderLetterItem} keyExtractor={function (i) { return i.title; }}/>
       </react_native_1.View>);
     };
-    return AlphabetLetterIndex;
+    return ListLetterIndex;
 }(React.PureComponent));
-exports.default = AlphabetLetterIndex;
+exports.default = ListLetterIndex;

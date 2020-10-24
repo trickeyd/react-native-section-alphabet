@@ -1,7 +1,7 @@
 const sizes = {
-  containerWidth: 10,
+  containerWidth: 16,
   itemHeight: 15,
-  itemFontSize: 10,
+  itemFontSize: 16,
 };
 
 const styles: any = {
@@ -10,7 +10,8 @@ const styles: any = {
     height: "100%",
     position: "absolute",
     top: 0,
-    right: 0,
+    right: 5,
+    padding: 5,
   },
 
   letterIndexList: {

@@ -2,7 +2,7 @@ import * as React from "react";
 import { SectionList } from "react-native";
 import ISectionData from "./interfaces/ISectionData";
 import IAlphabetListProps from "./interfaces/IAlphabetListProps";
-export default class AlphabetListView extends React.PureComponent<IAlphabetListProps> {
+export default class AlphabetList extends React.PureComponent<IAlphabetListProps> {
     state: {
         sectionData: ISectionData[];
     };

@@ -30,9 +30,9 @@ var getSectionData_1 = __importDefault(require("./utilities/getSectionData"));
 var ListLetterIndex_1 = __importDefault(require("./components/ListLetterIndex"));
 var AlphabetListStyle_1 = __importDefault(require("./styles/AlphabetListStyle"));
 var sizes_1 = __importDefault(require("./values/sizes"));
-var AlphabetListView = /** @class */ (function (_super) {
-    __extends(AlphabetListView, _super);
-    function AlphabetListView(props) {
+var AlphabetList = /** @class */ (function (_super) {
+    __extends(AlphabetList, _super);
+    function AlphabetList(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
             sectionData: [],
@@ -87,21 +87,21 @@ var AlphabetListView = /** @class */ (function (_super) {
         });
         return _this;
     }
-    AlphabetListView.prototype.componentDidMount = function () {
+    AlphabetList.prototype.componentDidMount = function () {
         this.setSectionData();
     };
-    AlphabetListView.prototype.componentDidUpdate = function (prevProps) {
+    AlphabetList.prototype.componentDidUpdate = function (prevProps) {
         if (prevProps.data.length !== this.props.data.length) {
             this.setSectionData();
         }
     };
-    AlphabetListView.prototype.render = function () {
+    AlphabetList.prototype.render = function () {
         return (<react_native_1.View style={[AlphabetListStyle_1.default.container, this.props.style]}>
         <react_native_1.SectionList {...this.props} ref={this.onSetSectionListRef} sections={this.state.sectionData} keyExtractor={function (item) { return item.key; }} renderItem={this.onRenderItem} renderSectionHeader={this.onRenderSectionHeader} getItemLayout={this.onGetItemLayout}/>
 
         <ListLetterIndex_1.default sectionData={this.state.sectionData} onPressLetter={this.onScrollToSection} indexLetterColor={this.props.indexLetterColor}/>
       </react_native_1.View>);
     };
-    return AlphabetListView;
+    return AlphabetList;
 }(React.PureComponent));
-exports.default = AlphabetListView;
+exports.default = AlphabetList;

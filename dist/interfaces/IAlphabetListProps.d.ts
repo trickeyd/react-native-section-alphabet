@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import IData from "./IData";
-interface Props {
+export default interface Props {
     data: IData[];
     style?: any;
     renderItem?: (item: IData) => JSX.Element;
@@ -13,4 +13,3 @@ interface Props {
     sectionHeaderHeight?: number;
     indexLetterColor?: string;
 }
-export default Props;
