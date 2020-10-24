@@ -14,15 +14,15 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
   getComputedLabelStyle() {
     const { indexLetterColor, indexLetterSize } = this.props;
 
-    if (indexLetterColor) {
-      return {
-        color: indexLetterColor,
-      };
-    }
-
     if (indexLetterSize) {
       return {
         fontSize: indexLetterSize
+      };
+    }
+
+    if (indexLetterColor) {
+      return {
+        color: indexLetterColor,
       };
     }
   }
