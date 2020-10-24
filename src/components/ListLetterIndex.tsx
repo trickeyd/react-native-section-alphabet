@@ -20,6 +20,12 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
         fontSize: indexLetterSize
       };
     }
+
+    if (indexLetterSize) {
+      return {
+        fontSize: indexLetterSize
+      };
+    }
   }
 
   renderLetterItem = ({ item, index }: { item: ISectionData; index: number }) => {
