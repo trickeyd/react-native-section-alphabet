@@ -44,8 +44,9 @@ var ListLetterIndex = /** @class */ (function (_super) {
         _this.renderLetterItem = function (_a) {
             var item = _a.item, index = _a.index;
             var computedLabelStyle = _this.getComputedLabelStyle();
+            var computedItemStyle = _this.getLetterItemStyle();
             return (<react_native_1.TouchableOpacity onPress={function () { return _this.props.onPressLetter(index); }}>
-        <react_native_1.View style={ListLetterIndexStyle_1.default.letterIndexItem}>
+        <react_native_1.View style={[ListLetterIndexStyle_1.default.letterIndexItem, computedItemStyle]}>
           <react_native_1.Text style={[ListLetterIndexStyle_1.default.letterIndexLabel, computedLabelStyle]}>{item.title}</react_native_1.Text>
         </react_native_1.View>
       </react_native_1.TouchableOpacity>);
@@ -65,6 +66,12 @@ var ListLetterIndex = /** @class */ (function (_super) {
         var props = this.props;
         if (props) {
             return __assign({ width: props.letterIndexWidth }, props.containerStyle);
+        }
+    };
+    ListLetterIndex.prototype.getLetterItemStyle = function () {
+        var letterItemStyle = this.props.letterItemStyle;
+        if (letterItemStyle) {
+            return __assign({}, letterItemStyle);
         }
     };
     ListLetterIndex.prototype.render = function () {

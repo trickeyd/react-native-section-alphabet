@@ -6,6 +6,7 @@ interface Props {
     indexLetterColor?: string;
     indexLetterSize?: number;
     letterIndexWidth?: number;
+    letterItemStyle?: any;
     containerStyle?: any;
     alphabetContainer?: any;
 }
@@ -15,6 +16,7 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
         fontSize: number | undefined;
     } | undefined;
     getWidthContainerStyle(): any;
+    getLetterItemStyle(): any;
     renderLetterItem: ({ item, index }: {
         item: ISectionData;
         index: number;
