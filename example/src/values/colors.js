@@ -1,16 +1,16 @@
 const colors = {
   background: {
-    light: 'white',
-    dark: '#8e8e93',
+    light: '#fff',
+    dark: '#0B3277',
   },
 
   seperatorLine: '#e6ebf2',
 
   text: {
-    dark: '#1c1b1e',
+    dark: '#363636',
   },
 
-  primary: '#007aff',
+  primary: '#ff6100',
 };
 
 export default colors;

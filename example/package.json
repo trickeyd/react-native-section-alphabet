@@ -1,7 +1,24 @@
 {
-  "name": "example",
-  "version": "0.0.1",
+  "name": "alphabet-ex",
+  "version": "0.0.2",
+  "description": "This is a example project.",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CofferHub/react-native-section-alphabet-list.git",
+    "baseUrl": "https://github.com/CofferHub/react-native-section-alphabet-list"
+  },
+  "keywords": [
+    "react-native",
+    "alphabet",
+    "SectionList",
+    "letters",
+    "address",
+    "addressbook"
+  ],
+  "author": {
+    "name": "CofferHub"
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -12,7 +29,7 @@
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "react-native-alphabet-list": "file:../"
+    "react-native-flatlist-alphabet": "file:../"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
