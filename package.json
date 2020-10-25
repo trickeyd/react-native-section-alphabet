@@ -20,8 +20,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CofferHub/react-native-section-alphabet-list.git",
-    "baseUrl": "https://github.com/CofferHub/react-native-section-alphabet-list"
+    "url": "git+https://github.com/CofferHub/react-native-flatlist-alphabet.git",
+    "baseUrl": "https://github.com/CofferHub/react-native-flatlist-alphabet"
   },
   "keywords": [
     "react-native",
@@ -29,11 +29,20 @@
     "SectionList",
     "letters",
     "address",
-    "addressbook"
+    "addressbook",
+    "FlatList",
+    "typescript",
+    "react-native-components"
   ],
-  "author": {
-    "name": "CofferHub"
+  "bugs": {
+    "url": "https://github.com/CofferHub/react-native-flatlist-alphabet/issues"
   },
+  "author": {
+    "name": "CofferHub",
+    "email": "coffer.hub@gmail.com",
+    "url": "https://github.com/CofferHub"
+  },
+  "homepage": "https://github.com/CofferHub/react-native-flatlist-alphabet/blob/master/README.md",
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
