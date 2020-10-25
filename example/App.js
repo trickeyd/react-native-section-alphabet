@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import AlphabetList from 'react-native-alphabet-list';
+import AlphabetList from 'react-native-flatlist-alphabet';
 import sampleData from './src/sampleData';
 import colors from './src/values/colors';
 import sizes from './src/values/sizes';
@@ -34,6 +34,7 @@ export default class App extends Component {
           renderSectionHeader={this.renderSectionHeader}
           getItemHeight={() => sizes.itemHeight}
           sectionHeaderHeight={sizes.headerHeight}
+          letterItemStyle={{ height: 20}}
           indexLetterColor={colors.primary}
         />
       </SafeAreaView>
