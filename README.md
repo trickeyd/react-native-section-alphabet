@@ -1,46 +1,31 @@
-# react-native-section-alphabet-list
+<img src="./assets/alphabet-list.png" alt="flatlist" />
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
 
 A simple React Native component that takes an array of data and renders a SectionList with alphabetically sorted data.
 
 ![Alt text](https://media.giphy.com/media/SACshMzMIP2NvP8rvY/giphy.gif)
 
-## Motivation
-
-Unlike alternatives, this package takes an array of data rather than an object with letters as keys.
-
-For example,
-
-_Other packages_
-
-```javascript
-const data = {
-  A: [{...}, ...],
-  B: [{...}, ...],
-  C: [{...}, ...],
-  ...
-}
-```
-
-_This package_
+This package_uses the array of objects data-structure.
 
 ```javascript
 const data = [{...}, {...}, {...}, ...]
 ```
 
-For _react-native-section-alphabet-list_, the data does not need to be pre-formatted and sorted before use. The component handles all this logic internally.
+For _react-native-flatlist-alphabet_, the data does not need to be pre-formatted and sorted before use. The component handles all this logic internally.
 
 ## Installation
 
 Using npm:
 
 ```bash
-npm install react-native-section-alphabet-list
+npm install react-native-flatlist-alphabet
 ```
 
 or with yarn:
 
 ```bash
-yard add react-native-section-alphabet-list
+yard add react-native-flatlist-alphabet
 ```
 
 ## Usage
@@ -48,7 +33,7 @@ yard add react-native-section-alphabet-list
 ### Import the module
 
 ```javascript
-import AlphabetList from "react-native-section-alphabet-list";
+import AlphabetList from "react-native-flatlist-alphabet";
 ```
 
 ### Use the component
@@ -77,138 +62,22 @@ const YourData = [
 ]
 ```
 
-## Example
+## Props
 
-```javascript
-class ListItem extends Component {
-   const { value } = this.props.item
-
-   return (
-      <View style={styles.listItemContainer}>
-        <Text style={styles.listItemLabel}>{value}</Text>
-      </View>
-    );
-}
-
-class SectionHeader extends Component {
-   const { title } = this.props.section
-
-   return (
-      <View style={styles.sectionHeaderContainer}>
-        <Text style={styles.sectionHeaderLabel}>{title}</Text>
-      </View>
-    );
-}
-
-class MyComponent extends Component {
-  state = {
-     data: [
-       { value: 'Albania', key: 'AL' },
-       { value: 'Canada', key: 'CA' },
-       { value: 'Benin', key: 'BJ' },
-       { value: 'Guinea', key: 'GN' },
-       { value: 'Ethiopia', key: 'ET' },
-       { value: 'Azerbaijan', key: 'AZ' },
-       { value: 'Bermuda', key: 'BM' },
-       { value: 'Greece', key: 'GR' },
-       { value: 'Hong Kong', key: 'HK' },
-       { value: 'Hungary', key: 'HU' },
-       { value: 'India', key: 'IN' },
-       { value: 'Ireland', key: 'IE' },
-       { value: 'Dominica', key: 'DM' },
-       { value: 'Jamaica', key: 'JM' },
-       { value: 'Mexico', key: 'MX' },
-       { value: 'Lithuania', key: 'LT' },
-       { value: 'Luxembourg', key: 'LU' },
-       { value: 'New Zealand', key: 'NZ' },
-       { value: 'Portugal', key: 'PT' },
-       { value: 'Japan', key: 'JP' },
-       { value: 'France', key: 'FR' },
-       { value: 'Egypt', key: 'EG' },
-       { value: 'Finland', key: 'FI' },
-       { value: 'China', key: 'CN' },
-       { value: 'Denmark', key: 'DK' }
-     ]
-  }
-
-  render() {
-    return (
-      <SafeAreaView style={styles.container}>
-        <AlphabetList
-          style={{ flex: 1 }}
-          data={this.state.data}
-          renderItem={ListItem}
-          renderSectionHeader={SectionHeader}
-          getItemHeight={() => sizes.itemHeight}
-          sectionHeaderHeight={sizes.headerHeight}
-          indexLetterColor={colors.primary}
-        />
-      </SafeAreaView>
-    );
-  }
-}
-
-const colors = {
-  background: {
-    light: 'white',
-    dark: '#8e8e93',
-  },
-
-  seperatorLine: '#e6ebf2',
-
-  text: {
-    dark: '#1c1b1e',
-  },
-
-  primary: '#007aff',
-};
-
-const sizes = {
-  itemHeight: 40,
-  headerHeight: 30,
-
-  spacing: {
-    regular: 15,
-  },
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.background.light,
-  },
-
-  listItemContainer: {
-    flex: 1,
-    height: sizes.itemHeight,
-    paddingHorizontal: sizes.spacing.regular,
-    justifyContent: 'center',
-    borderTopColor: colors.seperatorLine,
-    borderTopWidth: 1,
-  },
-
-  listItemLabel: {
-    color: colors.text.dark,
-    fontSize: 14,
-  },
-
-  sectionHeaderContainer: {
-    height: sizes.headerHeight,
-    backgroundColor: colors.background.dark,
-    justifyContent: 'center',
-    paddingHorizontal: sizes.spacing.regular,
-  },
-
-  sectionHeaderLabel: {
-    color: colors.background.light,
-  },
-});
-```
-
-## Roadmap
-
-- Support for more custom styles
-- Option to highlight which section is active when scrolling
+| Option | Description              | Default              |
+|--------|--------------------------|--------------------------|
+| `sectionData`   | The array of objects data with value and key. | -
+| `renderItem`   | Render the alphabet letter header. | JSX
+| `renderSectionHeader`   | Render the alphabet letter header. | JSX
+| `indexLetterColor`   | The alphabet letter font-size. | #0B3277
+| `indexLetterSize`   | The alphabet letter font-size. | 16
+| `letterIndexWidth`   | The alphabet letter index width size. | #0B3277
+| `sectionHeaderHeight`   | The section header defines each alphabet title header size. | 40
+| `getItemHeight`   | Returns the each item height position size. | 30
+| `letterItemStyle`   |  The container letter item style. | -
+| `containerStyle`   | The alphabet wrapper container style. | -
+| `alphabetContainer`   | The flatlist alphabet container style. | -
+| `style`   | The sectionlist container style. | -
 
 ## Contributing
 
