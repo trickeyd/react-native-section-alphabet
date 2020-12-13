@@ -1,4 +1,4 @@
-<img src="./assets/alphabet-list.png" alt="flatlist" />
+<img src="./assets/cover-section.png" alt="sectionlist" />
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
 
