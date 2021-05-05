@@ -105,7 +105,6 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
         <this.CustomSectionList
           {...this.props}
           ref={this.onSetSectionListRef}
-          onScroll
           sections={this.state.sectionData}
           keyExtractor={(item: IData) => item.key}
           renderItem={this.onRenderItem}
