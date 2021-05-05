@@ -12,6 +12,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -110,7 +121,7 @@ var AlphabetList = /** @class */ (function (_super) {
     };
     AlphabetList.prototype.render = function () {
         return (<react_native_1.View style={[AlphabetListStyle_1.default.container, this.props.style]}>
-        <this.CustomSectionList {...this.props} ref={this.onSetSectionListRef} sections={this.state.sectionData} keyExtractor={function (item) { return item.key; }} renderItem={this.onRenderItem} renderSectionHeader={this.onRenderSectionHeader} getItemLayout={this.onGetItemLayout}/>
+        <this.CustomSectionList {...__assign(__assign({}, this.props), { style: undefined })} ref={this.onSetSectionListRef} sections={this.state.sectionData} keyExtractor={function (item) { return item.key; }} renderItem={this.onRenderItem} renderSectionHeader={this.onRenderSectionHeader} getItemLayout={this.onGetItemLayout}/>
 
         <ListLetterIndex_1.default sectionData={this.state.sectionData} onPressLetter={this.onScrollToSection} indexLetterColor={this.props.indexLetterColor} indexLetterSize={this.props.indexLetterSize} letterIndexWidth={this.props.letterIndexWidth} containerStyle={this.props.containerStyle} alphabetContainer={this.props.alphabetContainer} letterItemStyle={this.props.letterItemStyle}/>
       </react_native_1.View>);

@@ -103,7 +103,7 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
     return (
       <View style={[styles.container, this.props.style]}>
         <this.CustomSectionList
-          {...this.props}
+          {...{ ...this.props, style: undefined }}
           ref={this.onSetSectionListRef}
           sections={this.state.sectionData}
           keyExtractor={(item: IData) => item.key}
