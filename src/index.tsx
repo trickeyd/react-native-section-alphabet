@@ -57,7 +57,8 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
       return;
     }
 
-    this.sectionList.scrollToLocation({
+    const node = this.sectionList.getNode ? this.sectionList.getNode() : this.sectionList;
+    node.scrollToLocation({
       sectionIndex,
       itemIndex: 0,
     });

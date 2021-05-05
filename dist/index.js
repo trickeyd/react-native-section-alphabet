@@ -69,7 +69,8 @@ var AlphabetList = /** @class */ (function (_super) {
             if (!_this.sectionList) {
                 return;
             }
-            _this.sectionList.scrollToLocation({
+            var node = _this.sectionList.getNode ? _this.sectionList.getNode() : _this.sectionList;
+            node.scrollToLocation({
                 sectionIndex: sectionIndex,
                 itemIndex: 0,
             });
