@@ -25,15 +25,15 @@ interface Props {
 }
 export default class ListLetterIndex extends React.PureComponent<Props> {
     getComputedLabelStyle(): {
-        color: string | undefined;
-        fontSize: number | undefined;
+        color: any;
+        fontSize: any;
     } | undefined;
     getWidthContainerStyle(): any;
     getLetterItemStyle(): any;
     renderLetterItem: ({ item, index }: {
         item: ISectionData;
         index: number;
-    }) => JSX.Element;
-    render(): JSX.Element;
+    }) => any;
+    render(): any;
 }
 export {};

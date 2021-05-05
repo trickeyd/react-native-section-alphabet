@@ -18,15 +18,18 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
 
   sectionList!: SectionList;
   onGetItemLayout: any;
+  CustomSectionList: any;
 
   constructor(props: IAlphabetListProps) {
     super(props);
+
+    this.CustomSectionList = props.CustomSectionList || SectionList;
 
     const { getItemHeight: onGetItemHeight = () => sizes.itemHeight, sectionHeaderHeight = sizes.itemHeight } = props;
 
     this.onGetItemLayout = sectionListGetItemLayout({
       getItemHeight: (_rowData: any, sectionIndex: number, rowIndex: number) =>
-      onGetItemHeight({ sectionIndex, rowIndex }),
+        onGetItemHeight({ sectionIndex, rowIndex }),
       getSectionHeaderHeight: () => sectionHeaderHeight,
       getSectionFooterHeight: () => 0,
     });
@@ -99,9 +102,10 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
   render() {
     return (
       <View style={[styles.container, this.props.style]}>
-        <SectionList
+        <this.CustomSectionList
           {...this.props}
           ref={this.onSetSectionListRef}
+          onScroll
           sections={this.state.sectionData}
           keyExtractor={(item: IData) => item.key}
           renderItem={this.onRenderItem}

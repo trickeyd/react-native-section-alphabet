@@ -21,6 +21,10 @@ export default interface Props {
    *
    */
   renderSectionHeader?: (section: any) => JSX.Element;
+
+  CustomSectionList: any;
+  onScroll?: any;
+
   onLoadMoreItems?: () => void;
   /**
    * Returns the each item height position size.

@@ -8,6 +8,7 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
     };
     sectionList: SectionList;
     onGetItemLayout: any;
+    CustomSectionList: any;
     constructor(props: IAlphabetListProps);
     componentDidMount(): void;
     componentDidUpdate(prevProps: IAlphabetListProps): void;
@@ -16,5 +17,5 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
     private onSetSectionListRef;
     private onRenderItem;
     private onRenderSectionHeader;
-    render(): JSX.Element;
+    render(): any;
 }
