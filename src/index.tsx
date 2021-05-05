@@ -16,7 +16,7 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
     sectionData: [],
   };
 
-  sectionList!: SectionList;
+  sectionList!: any;
   onGetItemLayout: any;
   CustomSectionList: any;
 
